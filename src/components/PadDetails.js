@@ -11,14 +11,14 @@ class PadDetails extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
+            data: [[0, 0, 0, 1, 0], [0, 1, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 1, 0], [1, 0, 0, 0, 0]]
         }
     }
 
     componentDidMount() {
         const wordRef = firebase.database().ref('Data');
         console.log(wordRef);
-        wordRef.on('value', (snapshot) => {
+        /*wordRef.on('value', (snapshot) => {
             let dataTemp = snapshot.val();
             console.log(dataTemp);
             let update = [];
@@ -34,29 +34,31 @@ class PadDetails extends Component {
             }
             console.log(update);
             this.setState({ data: df });
-        })
+        })*/
     }
 
     render() {
         return (
-            <div style={{ fontSize: "26px", color: 'coral' }}>
-                <HeatMap
-                    height={100}
-                    xLabels={xLabels}
-                    yLabels={yLabels}
-                    xLabelsLocation={"bottom"}
-                    xLabelWidth={60}
-                    data={this.state.data}
-                    squares
-                    onClick={(x, y) => console.log(`Clicked ${x}, ${y}`)}
-                    cellStyle={(background, value, min, max, data, x, y) => ({
-                        background: `rgb(76,175,80,${1 - (max - value) / (max - min)})`,
-                        fontSize: "26px",
-                        color: "#000"
-                    })}
-                    cellRender={value => value && `${value}`}
-                />
-            </div>
+            <React.Fragment>
+                <div style={{width: 'fit-content', fontSize: "30px", color: '#222', background: '#fff',margin: 'auto', marginTop: 20}}>
+                    <HeatMap
+                        height={100}
+                        xLabels={xLabels}
+                        yLabels={yLabels}
+                        xLabelsLocation={"bottom"}
+                        xLabelWidth={60}
+                        data={this.state.data}
+                        squares
+                        onClick={(x, y) => console.log(`Clicked ${x}, ${y}`)}
+                        cellStyle={(background, value, min, max, data, x, y) => ({
+                            background: `rgb(76,175,80,${1 - (max - value) / (max - min)})`,
+                            fontSize: "40px",
+                            color: "#000"
+                        })}
+                        cellRender={value => value && `${value}`}
+                    />
+                </div>
+            </React.Fragment>
         );
     }
 }
