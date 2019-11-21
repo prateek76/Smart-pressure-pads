@@ -1,6 +1,4 @@
-# (Rakshak) Smart pressure pads
-
-### 5th sem Project
+# (Rakshak) Smart pressure pads - 5th Semester Project
 
 ## Abstract
 In a crowd crush, people are subjected to compressive forces by being
