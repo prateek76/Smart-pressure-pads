@@ -57,10 +57,10 @@ npm start
 ```
 
 ## Team
-Prateek
-Akul Juneja
+* Prateek
+* Akul Juneja
 
 ## Special Mention
-Mohit Jain
-Pranay Chandra 
+* Mohit Jain
+* Pranay Chandra 
 
