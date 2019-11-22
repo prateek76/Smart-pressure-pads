@@ -42,7 +42,7 @@ sporting matches, music events and during emergency situations, such
 as fires and explosions.
 
 ## Image
-<img src="https://prateek76.github.io/Smart-pressure-pads/VIDEOnIMAGES/1.jpeg" width="800">
+<img src="https://prateek76.github.io/Rakshak/VIDEOnIMAGES/1.jpeg" width="800">
 
 ## Development setup
 
